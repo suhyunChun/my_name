@@ -14,20 +14,103 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #f1f1f1;
+  background-image: url('https://image.freepik.com/free-vector/white-background-with-triangle-patterns_1017-18410.jpg');
+
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #000;
 }
 
+.left-box, .right-box{
+  background-color: white;
+  display:flex;
+  flex-direction: column;
+  width:96%;
+  padding:13px;
+  box-shadow: 0 4px 10px 0 #9b9b9b, 0 4px 20px 0 #9b9b9b;
+}
+.btn{
+  font-size: 0.8rem;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  width: 140px;
+  background-color: white;
+  border: 1px dashed #ccc;
+  padding: 12px 24px;
+  margin:0;
+}
+.btn:hover{
+  background-color: #d0d0d0;
+}
+.left-title, .right-title{
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+#left>div, #right>div{
+  margin:20px;
+}
+
+.left-box>p, .right-box>p{
+  font-size:15px;
+
+}
 .App-link {
   color: #61dafb;
 }
+#content{
+  display:flex;
+  flex-direction: row;
+}
 
+#right{
+  padding-right:3%;
+  width:33.3%;
+  float:left;
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+
+}
+#left{
+  padding-right:3%;
+  margin-left:10px;
+  width:66.6%;
+  display:flex;
+  flex-direction: column;
+  height:100vh;
+}
+#bottom{
+  display:flex;
+  justify-items: flex-start;
+  padding:30px;
+
+}
+#bottom>p{
+  font-size:1rem;
+  color:white
+}
+
+@media only screen and (max-width: 980px) {
+  .right-box {
+    display: none;
+  }
+  #right{
+    width:0%;
+  }
+  #contnet{
+    width:100%;
+  }
+  #left{
+    width:90%;
+  }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
